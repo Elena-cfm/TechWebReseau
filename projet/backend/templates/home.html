@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block content %}
+
+<h2 class="title">Feed</h2>
+
+<div class="feed">
+
+    {% for post in posts %}
+
+    <div class="post-card">
+        <img src="{{ post.image }}" alt="post image">
+        <div class="post-content">
+            <p>{{ post.caption }}</p>
+        </div>
+    </div>
+
+    {% endfor %}
+
+</div>
+
+{% endblock %}
